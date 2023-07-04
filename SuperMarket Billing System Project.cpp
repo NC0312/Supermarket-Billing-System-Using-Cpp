@@ -392,7 +392,7 @@ void shopping::receipt()
 		while(choice=='y');
 		
 		cout<<"\n\n\t\t\t_______________________RECEIPT____________________\n";
-		cout<<"\nProduct No\t Product Name\t Product Quantity\tprice\tAmount\tAmount With Discount\n";
+		cout<<"\n"<<"ProductNo"<<"  "<<"ProductName"<<"  " <<"ProductQuantity"<<"  "<<"price"<<"  "<<"Amount"<<"  "<<"AmountWithDiscount"<<"\n";
 		
 		for(int i=0;i<c;i++){
 			data.open("database.txt",ios::in);
@@ -405,7 +405,7 @@ void shopping::receipt()
 					amount=price*arrq[i];   //total amount is price into quantity of the product which is stored in arrq...
 					dis=amount-(amount*dis/100);  //discount is calculated as amount minus percentage of discount on that amount...
 					total=total+dis;  //after that discount is added to total variable...
-					cout<<"\n"<<pcode<<"\t"<<pname<<"\t"<<arrq[i]<<"\t"<<price<<"\t"<<amount<<"\t"<<dis<<"\n";
+					cout<<"\n"<<pcode<<"     "<<pname<<"    "<<arrq[i]<<"    "<<price<<"    "<<amount<<"    "<<dis<<"\n";
 				}
 				data>>pcode>>pname>>price>>dis;  //continuing the iteration of reading file...
 			}
@@ -422,10 +422,3 @@ int main()
 	shopping s;
 	s.menu();
 }
-
-
-
-
-
-
-
